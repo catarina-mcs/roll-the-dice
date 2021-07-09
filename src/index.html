@@ -18,8 +18,8 @@
         <div class="game-area">
             <div class="progress">
                 <p class="rounds">
-                    Round <span id="current-round">x</span> of
-                    <span id="total-rounds">y</span>
+                    Round <span id="current-round">0</span> of
+                    <span id="total-rounds">0</span>
                 </p>
                 <div class="progress-bar"></div>
             </div>
@@ -110,6 +110,15 @@
             </div>
             <button id="btn">Roll Dice <span class="emoji">🎲</span></button>
         </div>
+
+        <div class="modal" id="modal">
+            <p>How many rounds do you want to play?</p>
+            <input type="number" value="3" id="rounds">
+            <button id="start-btn">Let's Roll!</button>
+        </div>
+
+        <div class="overlay" id="overlay"></div>
+
         <script src="./scripts/index.js"></script>
     </body>
 </html>
