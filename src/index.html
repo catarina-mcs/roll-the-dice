@@ -26,7 +26,8 @@
             <div class="player1">
                 <p class="player-id">Player 1</p>
 
-                <div class="dice">
+                <div class="dice" id="diceP1">
+                    <div class="dice1"><p class="blank">?</p></div>
                     <div class="dice1">
                         <div class="dot position5"></div>
                     </div>
@@ -62,13 +63,14 @@
                     </div>
                 </div>
 
-                <p class="score">Score: <span id="scoreP1">00</span></p>
+                <p class="score">Score: <span id="scoreP1">0</span></p>
             </div>
 
             <div class="player2">
                 <p class="player-id">Player 2</p>
 
-                <div class="dice">
+                <div class="dice" id="diceP2">
+                    <div class="dice2"><p class="blank">?</p></div>
                     <div class="dice2">
                         <div class="dot position5"></div>
                     </div>
@@ -104,12 +106,9 @@
                     </div>
                 </div>
 
-                <p class="score">Score: <span id="scoreP2">00</span></p>
+                <p class="score">Score: <span id="scoreP2">0</span></p>
             </div>
-            <button class="btn btn-main" id="btn-single">Single Roll</button>
-            <button class="btn btn-secondary" id="btn-double">
-                Double or Nil
-            </button>
+            <button id="btn">Roll Dice <span class="emoji">🎲</span></button>
         </div>
         <script src="./scripts/index.js"></script>
     </body>
