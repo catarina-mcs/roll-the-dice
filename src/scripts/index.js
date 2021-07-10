@@ -67,6 +67,8 @@ function rollDice() {
     const progressSections = Array.from(document.getElementsByClassName('progress-section'));
     let gameover = false;
 
+    rollBtn.removeEventListener('click', rollDice);
+
     if (player1Active) {
         roundsP1 ++;
         currentRoundDisplay.textContent = roundsP1;
@@ -81,6 +83,7 @@ function rollDice() {
             scoreP1 += i;
             scoreDisplayP1.textContent = scoreP1;
             diceP1.classList.remove('shuffle');
+            rollBtn.addEventListener('click', rollDice);
         },1000)
     } else if (!player1Active) {
         roundsP2++;
@@ -99,6 +102,7 @@ function rollDice() {
             scoreP2 += i;
             scoreDisplayP2.textContent = scoreP2;
             diceP2.classList.remove('shuffle');
+            rollBtn.addEventListener('click', rollDice);
             gameover && endGame();
         },1000)
     }
