@@ -17,17 +17,12 @@ const result = document.getElementById('result');
 const restartBtn = document.getElementById('restart-btn');
 let player1Active = true;
 let totalRounds;
-let roundsP1 = 0;
-let roundsP2 = 0;
-let scoreP1 = 0;
-let scoreP2 = 0;
+let roundsP1, roundsP2, scoreP1, scoreP2;
 
 
 function getRandomNumber() {
     return Math.floor(Math.random() * 6) + 1
 }
-
-startBtn.addEventListener('click', startGame);
 
 function setUpGame() {
     modal.style.display = 'block';
@@ -45,6 +40,10 @@ function setUpGame() {
     scoreDisplayP1.textContent = scoreP1;
     scoreDisplayP2.textContent = scoreP2;
     progressBar.innerHTML = '';
+
+    startBtn.addEventListener('click', () => {
+        if (rounds.value > 0 && rounds.value <= 20) startGame();
+});
 }
 
 function startGame() {
@@ -123,3 +122,5 @@ function endGame() {
         result.textContent = 'It\'s a tie.'
     }
 }
+
+setUpGame();
