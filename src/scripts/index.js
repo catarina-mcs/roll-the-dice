@@ -35,7 +35,6 @@ function setUpGame() {
     gameover.style.display = 'none';
     firstStartBtn.style.display = 'none';
     rollBtn.style.display = 'block';
-    rollBtn.classList.remove('btn-disabled');
     totalRounds = 0;
     roundsP1 = 0;
     roundsP2 = 0;
@@ -94,7 +93,6 @@ function rollDice() {
         roundsP2++;
         if (roundsP2 >= totalRounds) {
             rollBtn.removeEventListener('click', rollDice);
-            rollBtn.classList.add('btn-disabled');
             gameover = true;
         }
         dice2Faces.forEach(face => face.style.display = 'none');
@@ -118,7 +116,7 @@ function rollDice() {
 function endGame() {
     rollBtn.style.display = 'none';
     gameover.style.display = 'flex';
-    restartBtn.addEventListener('click', setUpGame)
+    restartBtn.addEventListener('click', setUpGame);
 
     if (scoreP1 > scoreP2) {
         result.textContent = 'Player 1 has won!'

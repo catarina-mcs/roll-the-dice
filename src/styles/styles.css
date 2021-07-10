@@ -88,6 +88,7 @@ h1 {
     font-size: 1rem;
     text-transform: uppercase;
     color: #841c26;
+    height: 24px;
 }
 
 .score {
@@ -194,14 +195,6 @@ button:hover {
 
 #roll-btn {
     display: none;
-}
-
-.btn-disabled {
-    cursor: not-allowed;
-}
-
-.btn-disabled:focus {
-    background-color: #ba274a;
 }
 
 .emoji {
