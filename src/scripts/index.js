@@ -15,6 +15,7 @@ const overlay = document.getElementById('overlay');
 const gameover = document.querySelector('.gameover');
 const result = document.getElementById('result');
 const restartBtn = document.getElementById('restart-btn');
+const firstStartBtn = document.getElementById('first-start-btn');
 let player1Active = true;
 let totalRounds;
 let roundsP1, roundsP2, scoreP1, scoreP2;
@@ -24,10 +25,15 @@ function getRandomNumber() {
     return Math.floor(Math.random() * 6) + 1
 }
 
+function initialStart() {
+    firstStartBtn.addEventListener('click',setUpGame)
+}
+
 function setUpGame() {
     modal.style.display = 'block';
     overlay.style.display = 'block';
     gameover.style.display = 'none';
+    firstStartBtn.style.display = 'none';
     rollBtn.style.display = 'block';
     rollBtn.classList.remove('btn-disabled');
     totalRounds = 0;
@@ -123,4 +129,4 @@ function endGame() {
     }
 }
 
-setUpGame();
+initialStart();

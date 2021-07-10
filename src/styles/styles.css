@@ -188,8 +188,12 @@ button:hover {
     background-color: #841c26;
 }
 
-#roll-btn {
+#roll-btn, #first-start-btn {
     grid-column: 1 / -1;
+}
+
+#roll-btn {
+    display: none;
 }
 
 .btn-disabled {
@@ -222,6 +226,7 @@ button:hover {
 /* --- Overlay --- */
 
 .overlay {
+    display: none;
     min-width: 100vw;
     min-height: 100vh;
     position: fixed;
@@ -231,6 +236,7 @@ button:hover {
 }
 
 .modal {
+    display: none;
     background-color: white;
     border-radius: 5px;
     position: absolute;
