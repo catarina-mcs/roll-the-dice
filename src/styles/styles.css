@@ -6,10 +6,11 @@
 
 body {
     background: linear-gradient(to bottom right, #8cdedc 0%, #b2ece1 100%);
+    background-size: cover;
     font-family: 'Roboto';
     color: #3e363f;
     text-align: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 header {
@@ -28,7 +29,7 @@ h1 {
 .game-area {
     background-color: #ffffff;
     max-width: 550px;
-    margin: 0 auto;
+    margin: 0 auto 2em;
     padding: 2.5em 4em;
     display: grid;
     justify-items: center;
@@ -221,10 +222,11 @@ button:hover {
 /* --- Overlay --- */
 
 .overlay {
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
+    min-width: 100vw;
+    min-height: 100vh;
+    position: fixed;
     top: 0;
+    left: 0;
     background-color: rgba(0,0,0,0.85);
 }
 
@@ -254,4 +256,14 @@ input {
     border: 1px solid #ba274a;
     border-radius: 3px;
     margin-right: 0.5em;
+}
+
+@media screen and (max-width:1280px) {
+    html {
+        font-size: 14px;
+    }
+
+    h1 {
+        padding: 0.5em 0;
+    }
 }
