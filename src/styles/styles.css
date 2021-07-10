@@ -58,6 +58,11 @@ h1 {
     height: 20px;
     border: 1px solid #2191fb;
     border-radius: 5px;
+    display: grid;
+}
+
+.progress-section {
+    background-color: #2191fb;
 }
 
 /* --- Players --- */
@@ -173,17 +178,44 @@ button {
     background-color: #ba274a;
     color: white;
     border: none;
-    grid-column: 1 / -1;
     justify-self: center;
     transition: background-color 300ms ease-in;
+    cursor: pointer;
 }
 
 button:hover {
     background-color: #841c26;
 }
 
+#roll-btn {
+    grid-column: 1 / -1;
+}
+
+.btn-disabled {
+    cursor: not-allowed;
+}
+
+.btn-disabled:focus {
+    background-color: #ba274a;
+}
+
 .emoji {
     margin-left: 0.2em;
+}
+
+/* --- Gameover --- */
+
+.gameover {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1 / -1;
+}
+
+#result {
+    font-size: 1.4rem;
+    display: inline-block;
+    margin-right: 1em;
 }
 
 /* --- Overlay --- */
