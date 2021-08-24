@@ -1,26 +1,27 @@
 {
-  "name": "roll-the-dice",
-  "version": "1.0.0",
-  "description": "A simple game where two players take turns rolling a dice",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/catarina-mcs/roll-the-dice.git"
-  },
-  "keywords": [
-    "dice",
-    "game"
-  ],
-  "author": "Catarina Santos",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/catarina-mcs/roll-the-dice/issues"
-  },
-  "homepage": "https://github.com/catarina-mcs/roll-the-dice#readme",
-  "devDependencies": {
-    "eslint": "^7.30.0"
-  }
+    "name": "roll-the-dice",
+    "version": "1.0.0",
+    "description": "A simple game where two players take turns rolling a dice",
+    "scripts": {
+        "dev": "parcel src/index.html",
+        "build": "parcel build src/index.html"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/catarina-mcs/roll-the-dice.git"
+    },
+    "keywords": [
+        "dice",
+        "game"
+    ],
+    "author": "Catarina Santos",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/catarina-mcs/roll-the-dice/issues"
+    },
+    "homepage": "https://github.com/catarina-mcs/roll-the-dice#readme",
+    "devDependencies": {
+        "eslint": "^7.30.0",
+        "parcel": "^2.0.0-rc.0"
+    }
 }
